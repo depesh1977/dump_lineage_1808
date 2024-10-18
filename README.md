@@ -1,0 +1,20 @@
+## full_k62v1_64_bsp-user 8.1.0 O11019 1625667558 release-keys
+- Manufacturer: vivo
+- Platform: mt6765
+- Codename: PD1732F_EX
+- Brand: vivo
+- Flavor: full_k62v1_64_bsp-user
+- Release Version: 8.1.0
+- Kernel Version: 4.9.77
+- Id: O11019
+- Incremental: 1625667558
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: false
+- Treble Device: true
+- Locale: en-US
+- Screen Density: 320
+- Fingerprint: vivo/1808/1808:8.1.0/O11019/1625667558:user/release-keys
+- OTA version: 
+- Branch: full_k62v1_64_bsp-user-8.1.0-O11019-1625667558-release-keys
+- Repo: vivo_pd1732f_ex_dump

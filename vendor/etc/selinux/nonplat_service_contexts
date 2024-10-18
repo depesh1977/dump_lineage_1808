@@ -1,0 +1,6 @@
+hal_fingerprint_oxi             u:object_r:hal_fingerprint_oxi_service:s0
+hal_fingerprint_synaptics       u:object_r:hal_fingerprint_synaptics_service:s0
+goodix_fpd                      u:object_r:goodix_fpd_service:s0
+hal_fingerprint_fpc             u:object_r:hal_fingerprint_fpc_service:s0
+fingerprint_analysis            u:object_r:fingerprint_analysis_service:s0
+anrmanager                                u:object_r:anr_service:s0

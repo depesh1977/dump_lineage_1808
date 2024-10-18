@@ -1,0 +1,13 @@
+kernel=kernel
+ramdisk=ramdisk
+page_size=2048
+kernel_size=9757038
+ramdisk_size=14200636
+base_addr=0x40078000
+kernel_offset=0x00008000
+ramdisk_offset=0x14f88000
+tags_offset=0x13f88000
+dtbo_offset=0xbff88000
+cmd_line='bootopt=64S3,32N2,64N2 product.version=PD1732F_EX_A_2.70.8 fingerprint.abbr=8.1.0/O11019 buildvariant=user'
+board=""
+format=gzip

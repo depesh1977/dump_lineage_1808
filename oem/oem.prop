@@ -1,0 +1,24 @@
+#
+# PD1732F_EX-N persist props
+#
+ro.oem.version=V1.00.20150519
+ro.product.model=vivo 1808
+ro.product.device=1808
+ro.product.name=1808
+ro.vivo.product.release.model=1808
+ro.vivo.product.release.name=1808
+ro.product.customize.bbk=N
+ro.vivo.product.model=PD1732F_EX
+persist.sys.vivo.product.cust=N
+ro.product.first_api_level=27
+
+ro.product.country.region=N
+ro.product.customize.comercial=NULL
+
+ro.build.emergency_base_os=vivo/1808/1808:8.1.0/O11019/1611196927:user/release-keys
+
+ro.vivo.oem.name=PD1732F_EX_N_NULL_NULL
+ro.vivo.product.version=PD1732F_EX_A_2.70.8
+ro.build.version.bbk=PD1732F_EX_A_2.70.8
+ro.build.fingerprint=vivo/1808/1808:8.1.0/O11019/1625667558:user/release-keys
+ro.build.netaccess.version=PD1732F_EX_A_2.70.8

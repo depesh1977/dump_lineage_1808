@@ -1,0 +1,86 @@
+#driver team : add by dengweicheng
+service vivo_drv_set /system/bin/vivo_drv_set
+	class main
+	user  root
+	group system
+	oneshot
+#end by dengweicheng
+
+service atcid-daemon /system/bin/atcid 
+	class late_start
+	user root 
+	group radio system
+	disabled
+
+service atcid-socket /system/bin/atcid -socket
+	class late_start
+	user root
+	group radio system
+	disabled
+
+on property:persist.sys.bbkem=1
+	start atcid-daemon
+	stop atcid-daemon-e
+	stop atcid-daemon-u
+
+on property:persist.sys.bbkem=2
+       restart atcid-daemon
+
+on property:persist.sys.bbkem=0
+	stop ftm_ffbm
+	stop atcid-daemon
+
+on property:sys.bbkem.socket=1
+	start atcid-socket
+
+on property:sys.bbkem.socket=0
+	stop atcid-socket
+
+service vivo_em_socket /system/bin/vivo_em_svr -socket
+	socket vivoEmSvr-service stream 660 radio system
+	user root
+	group system
+	disabled
+	oneshot
+
+service vivo_em_root /system/bin/vivo_em_svr -root
+	user root
+	group system
+	disabled
+	oneshot
+
+on property:sys.emsvr.opt=1
+	setprop sys.emsvr.opt.bak 0
+	restart vivo_em_socket
+
+on property:sys.emsvr.root=1
+	restart vivo_em_root
+
+on property:sys.emsvr.opt=0
+	setprop sys.emsvr.opt.bak 0
+	stop vivo_em_socket
+
+service vivo_em_svr /system/bin/vivo_em_svr -init
+	class late_start
+	user root
+	group system
+	oneshot
+
+service vivo_em_float /system/bin/vivo_em_svr -floating
+	user root
+	group system
+	disabled
+	oneshot
+
+on property:sys.boot_completed=1
+    start vivo_em_float
+
+service vivo_em_dpdt /system/bin/vivo_em_svr -dpdt
+	user root
+	group system
+	disabled
+	oneshot
+
+on property:sys.dpdt.control=1
+    start vivo_em_dpdt
+
